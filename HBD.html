@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #87ceeb, #bde9ff);
+      position: relative;
+    }
+
+    .cloud {
+      position: absolute;
+      width: 140px;
+      opacity: 0.5;
+      animation: gerakAwan 30s linear infinite;
+    }
+
+    .cloud2 {
+      top: 80px;
+      left: -200px;
+      animation-delay: 10s;
+    }
+
+    .cloud1 {
+      top: 30px;
+      left: -150px;
+    }
+
+    @keyframes gerakAwan {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(140vw);
+      }
+    }
+
+    .flowers-bottom {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 130px;
+      background: url('https://png.pngtree.com/png-vector/20240125/ourmid/pngtree-blue-hydrangea-flower-border-png-image_11497262.png') repeat-x bottom;
+      background-size: contain;
+      z-index: 1;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      width: 85%;
+      max-width: 650px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255,255,255,0.5);
+      animation: muncul 1s ease;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 70px;
+      color: white;
+      text-shadow:
+        0 0 10px white,
+        0 0 20px #d6f3ff,
+        0 0 30px #9edfff;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    p {
+      color: white;
+      font-size: 19px;
+      line-height: 1.9;
+      text-shadow: 0 0 8px rgba(255,255,255,0.8);
+    }
+
+    button {
+      margin-top: 25px;
+      border: none;
+      border-radius: 40px;
+      padding: 15px 35px;
+      background: white;
+      color: #5faee3;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 25px;
+      color: white;
+      font-size: 24px;
+      text-shadow: 0 0 10px white;
+      animation: muncul 1s ease;
+    }
+
+    .cat {
+      position: absolute;
+      width: 85px;
+      top: -10px;
+      animation: lompat 2s infinite ease-in-out;
+    }
+
+    .cat-left {
+      left: -20px;
+    }
+
+    .cat-right {
+      right: -20px;
+    }
+
+    @keyframes lompat {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .flower-rain {
+      position: absolute;
+      top: -20px;
+      font-size: 25px;
+      animation: jatuh linear forwards;
+      z-index: 0;
+    }
+
+    @keyframes jatuh {
+      from {
+        transform: translateY(-10vh) rotate(0deg);
+      }
+
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    @keyframes muncul {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img class="cloud cloud1" src="https://static.vecteezy.com/system/resources/previews/009/385/892/original/cloud-clipart-design-illustration-free-png.png">
+
+  <img class="cloud cloud2" src="https://static.vecteezy.com/system/resources/previews/009/385/892/original/cloud-clipart-design-illustration-free-png.png">
+
+  <div class="flowers-bottom"></div>
+
+  <div class="card">
+
+    <h1>Happy Birthday ✨</h1>
+
+    <p>
+      Hello my dear 🤍<br><br>
+
+      Happy Birth day! today ur turning 21 🌷<br>
+      You know dear, actually I’m not that good with words, but there is something I really want to tell you in this letter,
+      I want you to know how much I admire you. You are such an incredibly strong person—stronger than you even realize. I’ve seen how you face every challenge with so much courage, and it truly inspires me. So, I want to say that I’m so proud of you,
+      Being here with you makes me realize how lucky I am to have a friend like you. Happy Birthday, my dearest Olga Hapsominataf. I just want you to know that I'll always support you. 💙<br><br>
+
+      SELAMAT ULANG TAHUN MY DEAR ✨
+    </p>
+
+    <div style="position: relative; display: inline-block; margin-top: 15px;">
+
+      <img class="cat cat-left" src="https://media.tenor.com/l5ebZnCiFtoAAAAi/cat-black-cat.gif">
+
+      <button onclick="munculPesan()">
+        Klik Disini 👀
+      </button>
+      <img class="cat cat-right" src="https://media.tenor.com/vkYhP8LxkKQAAAAi/cat-cute.gif">
+
+    </div>
+
+    <div class="hidden" id="pesan">
+      "Thank you for being my friend. Even though we might have our own paths to follow later on, let’s keep doing our best for now. I’ll always be here to support you, no matter where we end up. 🌸💙
+    </div>
+
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/0j0sq3.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function munculPesan() {
+      document.getElementById('pesan').style.display = 'block';
+    }
+
+    function bungaJatuh() {
+      const bunga = document.createElement('div');
+      bunga.classList.add('flower-rain');
+
+      const daftar = ['🌸','💙','🌼'];
+      bunga.innerHTML = daftar[Math.floor(Math.random() * daftar.length)];
+
+      bunga.style.left = Math.random() * 100 + 'vw';
+      bunga.style.animationDuration = (Math.random() * 3 + 3) + 's';
+
+      document.body.appendChild(bunga);
+
+      setTimeout(() => {
+        bunga.remove();
+      }, 6000);
+    }
+
+    setInterval(bungaJatuh, 300);
+  </script>
+
+</body>
+</html>
